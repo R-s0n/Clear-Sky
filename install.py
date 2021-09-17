@@ -41,5 +41,6 @@ else :
     else:
         print("[-] Something went wrong!  Check the stack trace, make any necessary adjustments, and try again.  Exiting...")
         sys.exit(2)
+subprocess.run(['rm tls-scan-linux.tar.gz'], shell=True)
 
 print("[+] Installation complete!")
