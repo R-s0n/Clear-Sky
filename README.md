@@ -3,7 +3,7 @@
 This tool is designed to search for hidden subdomains or roots/seeds hosted in AWS's IP Range
 
 Methodology based on Daehee Park's fantastic [Blog Post](https://www.daehee.com/scan-aws-ip-ssl-certificates/)  
-Used to find subdomains or roots/seeds based jhaddix's equally fantastic [Recon Methodology v4.0](https://www.youtube.com/watch?v=p4JgIu1mceI&t=3088s)  
+Used to find subdomains or roots/seeds based jhaddix's equally fantastic [Recon Methodology v4.0](https://www.youtube.com/watch?v=p4JgIu1mceI&t=3082s)  
 
 ### TL:DR
 
