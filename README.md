@@ -16,6 +16,12 @@ Step 3: Run a full nmap scan on all servers with a matching certificate
     I AM NOT RESPONSABLE FOR HOW YOU USE THIS TOOL.  DON'T BE A DICK!                     
 ******************************************************************************************************
 
+### Install
+
+    python3 install.py
+    
+### Usage
+
     python3 clearsky.py [-h] [-u | --update] [-r | --rate] -s | --search [SEARCH_TERM]
                 Example: python3 clearsky.py -u -r 40000 -s "tesla.com"
 ------------------------------------------------------------------------------------------------------
