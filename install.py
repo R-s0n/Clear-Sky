@@ -41,6 +41,19 @@ else :
     else:
         print("[-] Something went wrong!  Check the stack trace, make any necessary adjustments, and try again.  Exiting...")
         sys.exit(2)
-subprocess.run(['rm tls-scan-linux.tar.gz'], shell=True)
+    subprocess.run(['rm tls-scan-linux.tar.gz'], shell=True)
+
+jq_check = subprocess.run(["jq --version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+if jq_check.returncode == 0:
+    print("[+] Jq is installed")
+else :
+    print("[!] Jq is NOT installed -- Installing now...")
+    subprocess.run(['sudo apt-get install jq'], shell=True)
+    jq_check2 = subprocess.run(["jq --version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    if jq_check2.returncode == 0:
+        print("[+] Jq was successfully installed")
+    else:
+        print("[-] Something went wrong!  Check the stack trace, make any necessary adjustments, and try again.  Exiting...")
+        sys.exit(2)
 
 print("[+] Installation complete!")
