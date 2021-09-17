@@ -9,7 +9,7 @@ def get_aws_ips():
     else:
         print("[!] Could not locate AWS IP Range JSON -- Downloading now...")
         subprocess.run([f"wget -O resources/aws-ip-ranges.json https://ip-ranges.amazonaws.com/ip-ranges.json"], stdout=subprocess.DEVNULL, shell=True)
-        print("[+] Tools directory successfully created")
+        print("[+] Successfully Downloaded AWS IP Range JSON")
     print("[-] Pulling IP Ranges from JSON...")
     f = open(f'resources/aws-ip-ranges.json')
     aws_ips = json.load(f)
