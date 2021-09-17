@@ -1,6 +1,6 @@
-data/*
-reports/*
-resources/*
+!/data/**
+!/reports/**
+!/resources/**
 tls-scan
 masscan
 pause.conf
