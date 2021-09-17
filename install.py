@@ -33,7 +33,7 @@ if tls_scan_check.returncode == 0:
     print("[+] Tls-scan is installed")
 else :
     print("[!] Tls-scan is NOT installed -- Installing now...")
-    subprocess.run(['wget "https://github.com/prbinu/tls-scan/releases/latest"'], shell=True)
+    subprocess.run(['wget "https://github.com/prbinu/tls-scan/releases/download/1.4.6/tls-scan-linux.tar.gz"'], shell=True)
     subprocess.run(['tar -xvzf tls-scan-linux.tar.gz'], shell=True)
     tls_scan_check2 = subprocess.run(["tls-scan/tls-scan --version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
     if tls_scan_check2.returncode == 0:
