@@ -1,6 +1,9 @@
-/data/*
-/reports/*
-/resources/*
+data/*
+reports/*
+resources/*
+!data/.gitkeep
+!reports/.gitkeep
+!resources/.gitkeep
 tls-scan
 masscan
 pause.conf
