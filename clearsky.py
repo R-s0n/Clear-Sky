@@ -52,9 +52,9 @@ def search_data(args):
     results_arr = results_str.stdout.split("\n")
     print(f"[-] Running final NMap scan on identified targets...")
     if len(results_arr) < 10:
-        subprocess.run([f"sudo nmap -T 4 -iL data/tls_filtered.tmp -Pn --script=http-title -p- --open > reports/{args.search}_{now}"], shell=True)
+        subprocess.run([f"sudo nmap -T 4 -iL data/tls_filtered.tmp -Pn --script=http-title -p- --open -oN reports/Clear-Sky_{args.search}_{now}"], shell=True)
     else:
-        subprocess.run([f"sudo nmap -T 4 -iL data/tls_filtered.tmp -Pn --script=http-title --top-ports 100 --open > reports/{args.search}_{now}"], shell=True)
+        subprocess.run([f"sudo nmap -T 4 -iL data/tls_filtered.tmp -Pn --script=http-title --top-ports 100 --open -oN reports/Clear-Sky_{args.search}_{now}"], shell=True)
     print(f"[+] NMap scan completed successfully!  A report has been created in the /reports directory")
     return True
 
