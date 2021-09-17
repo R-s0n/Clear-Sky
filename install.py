@@ -14,7 +14,7 @@ print("[-] Installing required packages...")
 subprocess.run(["pip3 install argparse datetime"], shell=True)
 
 masscan_check = subprocess.run(["masscan --version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
-if masscan_check.returncode == 0:
+if masscan_check.returncode == 1:
     print("[+] Masscan is installed")
 else :
     print("[!] Masscan is NOT installed -- Installing now...")
@@ -22,7 +22,7 @@ else :
     subprocess.run(['git clone https://github.com/robertdavidgraham/masscan'], shell=True)
     subprocess.run(['cd masscan; sudo make install;'], shell=True)
     masscan_check2 = subprocess.run(["masscan --version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
-    if masscan_check2.returncode == 0:
+    if masscan_check2.returncode == 1:
         print("[+] Masscan was successfully installed")
     else:
         print("[-] Something went wrong!  Check the stack trace, make any necessary adjustments, and try again.  Exiting...")
